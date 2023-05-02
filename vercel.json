@@ -7,16 +7,6 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/products",
-            "dest": "./index.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "./index.js"
-        }
-    ],
     "env": {
         "DB_CONNECTION_STRING": "$DB_CONNECTION_STRING"
     }
