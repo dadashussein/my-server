@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import productsRouter from "./routes/productsRouter.js";
+import categoryRouter from "./routes/categoryRouter.js";
 
 dotenv.config();
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/products", productsRouter);
+app.use("/categories", categoryRouter);
 
 const PORT = process.env.PORT || 9002;
 
